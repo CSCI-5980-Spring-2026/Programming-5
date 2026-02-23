@@ -1,0 +1,23 @@
+#version 460 core
+
+layout(std140, binding = 0) uniform Matrices
+{
+    mat4 model_matrix;
+    mat4 view_matrix;
+    mat4 model_view_matrix;
+    mat4 projection_matrix;
+};
+
+layout(location = 0) in vec3 position;
+layout(location = 2) in vec4 color;
+layout(location = 3) in vec2 uv;
+
+out vec4 vertex_color;
+out vec2 tex_coord;
+
+void main() 
+{
+    tex_coord = uv.xy;
+    vertex_color = color;
+    gl_Position = projection_matrix * model_view_matrix * vec4(position, 1);
+}
