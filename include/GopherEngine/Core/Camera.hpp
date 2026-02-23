@@ -10,7 +10,7 @@ namespace GopherEngine {
             void initialize(Transform& transform) override;
             void update(Transform& transform, float delta_time) override ;
             void update_matrices(const glm::mat4 &local_matrix, const glm::mat4 &world_matrix) override;
-            void draw(const glm::mat4 &world_matrix) override; 
+            void draw(const glm::mat4 &world_matrix, const glm::mat4 &view_matrix, const glm::mat4 &projection_matrix) override; 
 
             const glm::vec3& get_position() const;
             void set_position(const glm::vec3& position);

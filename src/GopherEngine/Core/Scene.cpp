@@ -60,7 +60,7 @@ namespace GopherEngine {
 
         if(camera_) {
             for(auto& node: nodes_) {
-                node->draw();
+                node->draw(camera_->get_view_matrix(), camera_->get_projection_matrix());
             }
         }
 

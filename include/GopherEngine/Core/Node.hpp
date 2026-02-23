@@ -16,7 +16,7 @@ namespace GopherEngine
             ~Node();
             void update(float delta_time);
             void update_matrices();
-            void draw();
+            void draw(const glm::mat4 &view_matrix, const glm::mat4 &projection_matrix);
             void add_component(std::shared_ptr<Component> component);
 
         private:

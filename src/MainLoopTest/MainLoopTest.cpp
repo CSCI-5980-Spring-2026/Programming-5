@@ -43,7 +43,6 @@ MainLoopTest::~MainLoopTest() {
 void MainLoopTest::configure() {
 
 	window_.set_title("CSCI 5980 Programming 5");
-
 }
 
 void MainLoopTest::initialize() {

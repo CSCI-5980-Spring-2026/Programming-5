@@ -44,12 +44,6 @@ namespace GopherEngine {
             return;
         }
 
-        // Fixed function pipeline
-        // This code will finally be removed in this class!
-        glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        glFrustum(-camera_aspect_ratio, camera_aspect_ratio, -1.f, 1.f, 1.f, 500.f);
-
         if(mode == ViewportMode::Fit) {
 
             float window_aspect_ratio = static_cast<float>(window_width) / static_cast<float>(window_height);

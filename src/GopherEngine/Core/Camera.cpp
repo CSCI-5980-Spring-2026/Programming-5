@@ -22,7 +22,7 @@ namespace GopherEngine {
     }
 
 
-    void Camera::draw(const glm::mat4 &world_matrix) {
+    void Camera::draw(const glm::mat4 &world_matrix, const glm::mat4 &view_matrix, const glm::mat4 &projection_matrix) {
         // Camera does not draw anything itself.
     }
 

@@ -44,9 +44,9 @@ namespace GopherEngine {
         }
     }
     
-    void Node::draw() {
+    void Node::draw(const glm::mat4 &view_matrix, const glm::mat4 &projection_matrix) {
         for (const auto& component : components_) {
-            component->draw(world_matrix_);
+            component->draw(world_matrix_, view_matrix, projection_matrix);
         }
     }
 }

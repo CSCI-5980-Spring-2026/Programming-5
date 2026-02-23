@@ -15,6 +15,6 @@ namespace GopherEngine
             virtual void initialize(Transform& transform) = 0;
             virtual void update(Transform& transform, float delta_time) = 0;
             virtual void update_matrices(const glm::mat4 &local_matrix, const glm::mat4 &world_matrix) = 0;
-            virtual void draw(const glm::mat4 &world_matrix) = 0;
+            virtual void draw(const glm::mat4 &world_matrix, const glm::mat4 &view_matrix, const glm::mat4 &projection_matrix) = 0;
     };
 }
